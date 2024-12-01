@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Datos Bancarios</title>
+    <style>
+        body {
+            background-color: #f8e1e1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #ff4d94;
+        }
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1f66;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ingreso de Datos Bancarios</h1>
+        <form id="form">
+            <input type="text" id="cardNumber" placeholder="Número de tarjeta" required><br>
+            <input type="text" id="expiryDate" placeholder="Fecha de expiración (MM/AA)" required><br>
+            <input type="password" id="cvv" placeholder="Código de seguridad" required><br>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="giftImage" class="hidden">
+            <img src="https://www.example.com/tu-imagen-de-regalo.jpg" alt="Imagen de regalo">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Ocultar el formulario y mostrar la imagen de recompensa
+            document.getElementById('form').style.display = 'none';
+            document.getElementById('giftImage').classList.remove('hidden');
+        });
+    </script>
+
+</body>
+</html>
